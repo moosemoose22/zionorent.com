@@ -1,0 +1,142 @@
+<div class="links">
+<style>
+	.galleria{ width: 800px; height: 534px; background: #FFFFFF }
+	.enlargeImage {
+	  border-radius: 5px;
+	  cursor: pointer;
+	  transition: 0.3s;
+	}
+
+	#enlargeImage:hover {
+		opacity: 0.7;
+		cursor: hand;
+	}
+
+	/* The Modal (background) */
+	.modal {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 100px; /* Location of the box */
+	  left: 0;
+	  top: 0;
+	  width: 100%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgb(0,0,0); /* Fallback color */
+	  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (image) */
+	.modal-content {
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  max-width: 700px;
+	}
+
+	/* Caption of Modal Image */
+	#caption {
+	  margin: auto;
+	  display: block;
+	  width: 80%;
+	  max-width: 700px;
+	  text-align: center;
+	  color: #ccc;
+	  padding: 10px 0;
+	  height: 150px;
+	}
+
+	/* Add Animation */
+	.modal-content, #caption {
+	  -webkit-animation-name: zoom;
+	  -webkit-animation-duration: 0.6s;
+	  animation-name: zoom;
+	  animation-duration: 0.6s;
+	}
+
+	@-webkit-keyframes zoom {
+	  from {-webkit-transform:scale(0)}
+	  to {-webkit-transform:scale(1)}
+	}
+
+	@keyframes zoom {
+	  from {transform:scale(0)}
+	  to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+	  position: absolute;
+	  top: 15px;
+	  right: 35px;
+	  color: #f1f1f1;
+	  font-size: 40px;
+	  font-weight: bold;
+	  transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+	  color: #bbb;
+	  text-decoration: none;
+	  cursor: pointer;
+	}
+
+	/* 100% Image Width on Smaller Screens */
+	@media only screen and (max-width: 700px){
+	  .modal-content {
+		width: 100%;
+	  }
+	}
+</style>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01">
+	<div id="caption"></div>
+</div>
+<div data-ng-if="pageName != 'travel'"><a href="#/travel">Travel</a></div>
+<div data-ng-if="pageName == 'travel'" class="mainCategoryCurrent">Travel</div>
+
+<!-- Photo series -->
+<div data-ng-if="mainCategory != 'series'"><a href="#/series">Photo<br />Series</a></div>
+<div data-ng-if="pageName == 'series'" class="mainCategoryCurrent categoryHead">Photo<br />Series</div>
+<div data-ng-if="mainCategory == 'series' && pageName != 'series'" class="categoryHead"><a href="#/series">Photo<br />Series</a></div>
+<div data-ng-if="mainCategory == 'series' && pageName != 'anonymity'" class="subsublinks"><a href="#/series/anonymity" class="subsublink">Anonymity</a></div>
+<div data-ng-if="mainCategory == 'series' && pageName == 'anonymity'" class="subsubnonlinks">Anonymity</div>
+<div data-ng-if="mainCategory == 'series' && pageName != 'worldpeople'" class="subsublinks"><a href="#/series/worldpeople" class="subsublink">Larger World</a></div>
+<div data-ng-if="mainCategory == 'series' && pageName == 'worldpeople'" class="subsubnonlinks">Larger World</div>
+<div data-ng-if="mainCategory == 'series' && pageName != 'digidarkroom'" class="subsublinks"><a href="#/series/digidarkroom" class="subsublink">Digital darkroom</a></div>
+<div data-ng-if="mainCategory == 'series' && pageName == 'digidarkroom'" class="subsubnonlinks">Digital darkroom</div>
+<div data-ng-if="mainCategory == 'series' && pageName != 'peoplenature'" class="subsublinks"><a href="#/series/peoplenature" class="subsublink">People and nature</a></div>
+<div data-ng-if="mainCategory == 'series' && pageName == 'peoplenature'" class="subsubnonlinks">People and nature</div>
+
+<!-- Analog darkrooms -->
+<div data-ng-if="mainCategory != 'darkroom'"><a href="#/darkroom">Analog Darkrooms</a></div>
+<div data-ng-if="pageName == 'darkroom'" class="mainCategoryCurrent categoryHead">Analog Darkrooms</div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName != 'darkroom'" class="categoryHead"><a href="#/darkroom">Analog Darkrooms</a></div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName != 'colordarkroom'" class="sublinks"><a href="#/darkroom/colordarkroom" class="sublink">Color</a></div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName == 'colordarkroom'" class="subnonlinks">Color</div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName != 'howitworks'" class="subsublinks"><a href="#/darkroom/colordarkroom/howitworks" class="subsublink">How it works</a></div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName == 'howitworks'" class="subsubnonlinks">How it works</div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName != 'printing'" class="subsublinks"><a href="#/darkroom/colordarkroom/printing" class="subsublink">Printing in action</a></div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName == 'printing'" class="subsubnonlinks">Printing in action</div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName != 'analogvsdigital'" class="subsublinks"><a href="#/darkroom/colordarkroom/analogvsdigital" class="subsublink">Analog vs. digital</a></div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName == 'analogvsdigital'" class="subsubnonlinks">Analog vs. digital</div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName != 'bwdarkroom'" class="sublinks"><a href="#/darkroom/bwdarkroom" class="sublink">Black + White</a></div>
+<div data-ng-if="mainCategory == 'darkroom' && pageName == 'bwdarkroom'" class="subnonlinks">Black + White</div>
+
+<div data-ng-if="mainCategory != 'photobooks'"><a href="#/photobooks">Photo Books</a></div>
+<div data-ng-if="pageName == 'photobooks'" class="mainCategoryCurrent categoryHead">Photo Books</div>
+<div data-ng-if="mainCategory == 'photobooks' && pageName != 'photobooks'" class="categoryHead"><a href="#/photobooks">Photo Books</a></div>
+<div data-ng-if="mainCategory == 'photobooks'" data-ng-repeat="photobook in photobookdata"  class="sublinks">
+	<span data-ng-if="pageName == photobook.url" class="subnonlinks" data-ng-bind-html="photobook.title"></span>
+	<a data-ng-if="pageName != photobook.url" data-ng-href="#/photobooks/{{photobook.url}}" class="sublink" data-ng-bind-html="photobook.title"></a>
+</div>
+<div data-ng-if="pageName != 'latest'"><a href="#/latest">Latest</a></div>
+<div data-ng-if="pageName == 'latest'" class="mainCategoryCurrent">Latest</div>
+<div data-ng-if="pageName != 'about'"><a href="#/about">About</a></div>
+<div data-ng-if="pageName == 'about'" class="mainCategoryCurrent">About</div>
+<div><a href="#/home">Home</a></div>
+</div>

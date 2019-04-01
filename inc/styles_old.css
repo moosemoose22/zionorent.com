@@ -1,0 +1,282 @@
+	@font-face {
+		font-family: mainFont;
+		src: url('fonts/SF Grandezza Light.ttf');
+        font-weight: normal;
+        font-style: normal;
+	}
+    @font-face {
+        font-family: mainFont;
+        src: url('fonts/SF Grandezza Light Oblique.ttf');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: mainFont;
+        src: url('fonts/SF Grandezza Medium.ttf');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: mainFont;
+        src: url('fonts/SF Grandezza Medium Oblique.ttf');
+        font-weight: bold;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: mainFont;
+        src: url('fonts/SF Grandezza Heavy.ttf');
+        font-weight: 900;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: mainFont;
+        src: url('fonts/SF Grandezza Heavy Oblique.ttf');
+        font-weight: 900;
+        font-style: italic;
+    }
+    body
+	{
+		/*background-color: #292929;*/
+		background-color: white;
+	}
+    td
+	{
+		text-align: center;
+		padding-bottom: 8px;
+	}
+	.mainBody
+	{
+		width: 800px;
+		text-align: center;
+	}
+	.homeheader
+	{
+		font-family: mainFont;
+		padding-bottom: 25px;
+	}
+    .frontPageSubtable
+    {
+        padding: 0px;
+        
+    }
+	.header
+	{
+		font-family: mainFont;
+		margin-bottom: 0em;
+		padding-bottom: 0em;
+	}
+	.homeheader, .header
+	{
+		text-transform: uppercase;
+		color: #292929;
+		font-size: 35px;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	.links
+	{
+		text-align: left;
+		line-height: 200%;
+		width: 170px;
+	}
+	.links div
+	{
+		padding-bottom: 30px;
+	}
+	.links div.sublinks, .links div.subnonlinks, .links div.categoryHead
+	{
+		padding-bottom: 5px;
+	}
+	.links div.sublinks, .links div.subnonlinks
+    {
+        padding-left: 12px;
+	}
+	.links div.subsublinks, .links .subsubnonlinks
+	{
+        padding-left: 24px;
+		padding-bottom: 5px;
+	}
+	.subheader
+	{
+		font-family: mainFont;
+		font-weight: normal;
+		color: #292929;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+    .filmSubheader
+    {
+        width: 400px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+	a, .subsubnonlinks, .subnonlinks, div.mainCategoryCurrent
+	{
+		font-family: mainFont;
+		text-transform: uppercase;
+		color: #292929;
+		font-size: 12pt;
+	}
+	a.sublink, a.subsublink, .subsubnonlinks, .subnonlinks
+	{
+		font-size: 10pt;
+	}
+    div.mainCategoryCurrent, div.boldText, a.boldText
+    {
+        font-weight: bold;
+    }
+    .subsubnonlinks, .subnonlinks
+    {
+        font-style: normal;
+        font-weight: 900;
+    }
+	.regText, .regTextLeft
+	{
+		font-family: mainFont;
+		font-weight: normal;
+		color: #292929;
+		font-size: 14px;
+		line-height: 170%;
+		/*
+		letter-spacing: 1.5px;*/
+	}
+    .floatRight
+    {
+        float: right;
+    }
+    .alignLeft, .regTextLeft
+    {
+        text-align: left;
+    }
+    .alignElementCenter
+    {
+        margin: auto;
+    }
+    .alignCenter
+    {
+        text-align: center;
+    }
+    .horizontalAlign
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .verticalAlign
+    {
+        display: flex;
+        flex-direction: column;
+    }
+	a
+	{
+		text-decoration: none;
+	}
+	a:hover
+	{
+		text-decoration: none;
+		color: #292929;
+		text-shadow: 0px 0px 10px #292929;
+	}
+	a.reg, a.blog
+	{
+		font-weight: normal;
+		text-transform: none;
+		font-family: mainFont;
+		text-decoration: underline;
+		color: #292929;
+	}
+	a.reg
+	{
+		font-size: 14px;
+	}
+	a.reg:hover
+	{
+		text-decoration: none;
+		text-shadow: none;
+	}
+	a.blog:hover
+	{
+		text-decoration: none;
+	}
+	.photoCategory
+	{
+		border: 1px solid white;
+		vertical-align: top;
+		font-family: mainFont;
+		text-transform: uppercase;
+		color: #292929;
+		font-size: 16pt;
+	}
+	.photoCategory:hover
+	{
+		border: 1px solid #292929;
+		cursor: pointer;
+		cursor: hand;
+	}
+
+	table.footer
+	{
+		margin-top: 20px;
+	}
+	table.footer tr td
+	{
+		font-family: mainFont;
+		text-transform: uppercase;
+		color: black;
+        font-size: 12px;
+	}
+	.alignTop
+	{
+		vertical-align: top;
+	}
+
+    .leftMargin10
+    {
+        margin-left: 10px;
+    }
+
+    .leftPadding25
+    {
+        padding-left: 25px;
+    }
+
+    .rightPadding25
+    {
+        padding-right: 25px;
+    }
+
+    figcaption
+    {
+        font-family: mainFont;
+    }
+
+    /* Blog post */
+    .blogpost h2, .blogpost h4, h2.categorySubtitle, h3.categorySubtitle
+    {
+        font-family: mainFont;
+        color: black;
+    }
+
+    .blogpost article
+    {
+        font-family: mainFont;
+        color: black;
+        text-align: left;
+        line-height: 24px;
+    }
+
+    .blogpost figure
+    {
+        width: 400px;
+        border: 1px solid black;
+        margin: 2px;
+    }
+
+    .blogpost figcaption
+    {
+        padding: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 13px;
+    }
