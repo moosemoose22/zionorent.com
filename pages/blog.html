@@ -1,0 +1,17 @@
+<table>
+<tr>
+<td class="alignTop">
+	<div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+</td>
+<td class="alignTop mainBody">
+    <div class='blogpost'>
+        <h1 class="header">{{blogPostObj.title}}</h1>
+        <h2>{{blogPostObj.subTitle}}</h2>
+        <h4>{{blogPostObj.date_posted}}</h4>
+        <article data-ng-bind-html="thisCanBeusedInsideNgBindHtml">
+            
+        </article>
+    </div>
+</td>
+</tr>
+</table>

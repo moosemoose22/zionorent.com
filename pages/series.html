@@ -1,0 +1,56 @@
+<style>
+    .tableRow
+	{
+		display: table-row;
+	}
+	.photoCategory
+	{
+		display: table-cell;
+		text-align: center;
+		padding: 10px;
+	}
+</style>
+<table>
+<tr>
+<td class="alignTop">
+	<div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+</td>
+<td class="alignTop mainBody">
+
+<div class="header">Photo series</div>
+    <div class="regText"><a href="http://masteringphoto.com/creating-a-series-of-images/" class="reg" target="top">Here's a quote</a> from Brooke Shaden on creating series of images:</div>
+<div class="regText"><i>Creating a series is relevant because it allows the photographer to tell a meaningful story through images in an organic way. Instead of a portfolio or show feeling disjointed because of seemingly random images being put together, a series takes the viewer into a new world. Suddenly each picture expands on the last and when images relate, the story grows.</i></div>
+<br /><br />
+<div align="center">
+    <div class="tableRow">
+        <div class="photoCategory">
+            <a href="#/series/anonymity">
+                <img src="../images/Anonymity/quebec_city_20151017_290.jpg" />
+                <br />Anonymity
+            </a>
+        </div>
+        <div class="photoCategory">
+            <a href="#/series/worldpeople">
+                <img src="../images/Anonymity/christian_science_fountain_and_shadows_20171014_31_cover.jpg" />
+                <br />Stepping into a<br />Larger World 
+            </a>
+        </div>
+    </div>
+    <div class="tableRow">
+        <div class="photoCategory">
+            <a href="#/series/digidarkroom">
+                <img src="../images/digidarkroom/Winter_Charles_river_airplanes_boston_20140105_15_2_cover.jpg" />
+                <br />Digital darkroom
+            </a>
+        </div>
+        <div class="photoCategory">
+            <a href="#/series/peoplenature">
+                <img src="../images/ManToNature/NESOP_advanced_color_20131207_090.jpg" />
+                <br />Relationship of people to nature
+            </a>
+        </div>
+    </div>
+</div>
+</td>
+</tr>
+</table>

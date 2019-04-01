@@ -1,0 +1,19 @@
+<div>
+    <table>
+    <tr>
+    <td class="alignTop">
+        <div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+    </td>
+    <td class="alignTop mainBody">
+        <div class="blogpost photobookContainer">
+            <div class="header" data-ng-bind-html="thisTitleCanBeusedInsideNgBindHtml"></div>
+            <img class="blogTitlePhoto" data-ng-src="{{ photoBookObj.titlePhoto }}" />
+            <article data-ng-bind-html="thisDescCanBeusedInsideNgBindHtml">
+            </article>
+            <br />
+            <div><a data-ng-href="{{photoBookObj.book_url}}" target="top">See more here!</a></div>
+        </div>
+    </td>
+    </tr>
+    </table>
+</div>

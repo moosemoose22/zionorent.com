@@ -1,0 +1,43 @@
+<table>
+<tr>
+<td class="alignTop">
+	<div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+</td>
+<td class="alignTop mainBody">
+
+<div class="header">Latest!</div>
+<div class="regText">Here are some thoughts and visuals from my photographic meanderings.
+</div>
+<div class="alignElementCenter">
+	<table class="alignElementCenter">
+	<tr>
+		<td class="alignElementCenter" style="padding-left:4px; padding-right: 4px">
+			<select data-ng-change="chooseTag(tags)" data-ng-model="chosenTag" data-ng-options='tag for tag in tags'>
+			</select>
+		</td>
+	</tr>
+	</table>
+</div>
+
+<table align="center">
+<tr data-ng-repeat="blogposts in blogpostdata">
+	<td data-ng-repeat="blogpost in blogposts" class="photoCategory" data-ng-click="showBlogPost(blogpost)">
+		<a xhref="#/travel">
+			<img data-ng-src="{{ blogpost.titlePhotoMedium }}" />
+			<div ng-bind-html="trustAsHtml(blogpost.title)"></div>
+		</a>
+	</td>
+</tr>
+</table>
+<!--
+	<td class="photoCategory"><a xhref="#/travel"><img src="images/books/Adonde-Estuviste-por-Nuevo-Ano_-Cover_front_small.jpg" />
+		<br />Ad&oacute;nde Estuviste por el Nuevo A&ntilde;o</a></td>
+	<td class="photoCategory"><a xhref="#/darkroom"><img src="images/books/To-Meet-the-Moe-Cover_front_small.jpg" />
+		<br />To Meet The Moe</a></td>
+	<td class="photoCategory"><a xhref="#/digidarkroom"><img src="images/books/Looking-for-Moose-Cover_front_small.jpg" />
+		<br />Looking for Moose</a></td>
+-->
+
+</td>
+</tr>
+</table>

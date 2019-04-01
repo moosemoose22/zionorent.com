@@ -1,0 +1,45 @@
+<style>
+	.blogRowItemTitle
+	{
+		font-weight: bold;
+		padding-right: 14px;
+	}
+	.blogRowItemDate
+	{
+		font-weight: normal;
+	}
+	.blogRowItemTitle, .blogRowItemDate
+	{
+		text-align: left;
+		text-transform: none;
+		font-family: mainFont;
+		text-decoration: none;
+		color: #292929;
+		font-size: 14px;
+	}
+	.blogRowItemTitle:hover, .blogRowItemDate:hover, .blogTitlePhoto:hover
+	{
+		text-decoration: none;
+		text-shadow: 0px 0px 10px #292929;
+		cursor: pointer;
+	}
+</style>
+
+<table>
+<tr>
+<td class="alignTop">
+	<div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+</td>
+<td class="alignTop mainBody">
+
+	<div class="header">{{pageTitle}}</div>
+	<div data-ng-if="isCategory">
+		<h3 class="categorySubtitle">{{ pageSubtitle }}</h3>
+		<ng-galleria source="blogCategoryImages"></ng-galleria>
+		<article data-ng-bind-html="thisCanBeusedInsideNgBindHtml">
+
+		</article>
+	</div>
+</td>
+</tr>
+</table>

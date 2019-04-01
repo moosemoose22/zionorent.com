@@ -1,0 +1,36 @@
+<table>
+<tr>
+<td class="alignTop">
+	<div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+</td>
+<td class="alignTop mainBody">
+
+<div class="header">Photo Books</div>
+<div class="regText">I've always been involved in both photograph and page layout.
+I can't explain what draws me to continue to make more photo books.
+It might simply be an artistic need which I will only understand once these books are made.
+I often collaborate with my wife Emily.
+</div>
+
+<table align="center">
+<tr data-ng-repeat="photobooks in photobookDisplaydata">
+    <td data-ng-repeat="photobook in photobooks" class="photoCategory" data-ng-click="showPhotoBook(photobook)">
+        <a xhref="#/travel">
+            <img data-ng-src="{{ photobook.titlePhoto }}" />
+            <div ng-bind-html="trustAsHtml(photobook.title)"></div>
+        </a>
+    </td>
+</tr>
+</table>
+<!--
+	<td class="photoCategory"><a xhref="#/travel"><img src="images/books/Adonde-Estuviste-por-Nuevo-Ano_-Cover_front_small.jpg" />
+		<br />Ad&oacute;nde Estuviste por el Nuevo A&ntilde;o</a></td>
+    <td class="photoCategory"><a xhref="#/darkroom"><img src="images/books/To-Meet-the-Moe-Cover_front_small.jpg" />
+		<br />To Meet The Moe</a></td>
+	<td class="photoCategory"><a xhref="#/digidarkroom"><img src="images/books/Looking-for-Moose-Cover_front_small.jpg" />
+		<br />Looking for Moose</a></td>
+-->
+
+</td>
+</tr>
+</table>

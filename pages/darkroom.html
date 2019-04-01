@@ -1,0 +1,35 @@
+<style>
+	.photoCategory
+	{
+		display: table-cell;
+		text-align: center;
+		padding: 10px;
+	}
+</style>
+<table>
+<tr>
+<td class="alignTop">
+	<div data-ng-include="'/inc/header.html'" data-ng-controller="HeaderCtrl"></div>
+</td>
+<td class="alignTop mainBody">
+
+<div class="header">Analog Darkrooms</div>
+<div class="regText">An exploration of what brought us to photography today.</div>
+<br /><br />
+<div class="darkroom_container" align="center">
+	<div class="photoCategory">
+		<a href="#/darkroom/bwdarkroom">
+			<img src="../images/darkroom/Fenway.jpg" />
+			<br />Black + White Darkroom
+		</a>
+	</div>
+	<div class="photoCategory">
+		<a href="#/darkroom/colordarkroom">
+			<img src="../images/darkroom/LarzAndersen.jpg" />
+			<br />Color Darkroom
+		</a>
+	</div>
+</div>
+</td>
+</tr>
+</table>
