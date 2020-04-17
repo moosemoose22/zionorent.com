@@ -1,45 +1,45 @@
 	@font-face {
 		font-family: mainFont;
 		src: url('fonts/SF Grandezza Light.ttf');
-        font-weight: normal;
-        font-style: normal;
+		font-weight: normal;
+		font-style: normal;
 	}
-    @font-face {
-        font-family: mainFont;
-        src: url('fonts/SF Grandezza Light Oblique.ttf');
-        font-weight: normal;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: mainFont;
-        src: url('fonts/SF Grandezza Medium.ttf');
-        font-weight: bold;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: mainFont;
-        src: url('fonts/SF Grandezza Medium Oblique.ttf');
-        font-weight: bold;
-        font-style: italic;
-    }
-    @font-face {
-        font-family: mainFont;
-        src: url('fonts/SF Grandezza Heavy.ttf');
-        font-weight: 900;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: mainFont;
-        src: url('fonts/SF Grandezza Heavy Oblique.ttf');
-        font-weight: 900;
-        font-style: italic;
-    }
-    body
+	@font-face {
+		font-family: mainFont;
+		src: url('fonts/SF Grandezza Light Oblique.ttf');
+		font-weight: normal;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: mainFont;
+		src: url('fonts/SF Grandezza Medium.ttf');
+		font-weight: bold;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: mainFont;
+		src: url('fonts/SF Grandezza Medium Oblique.ttf');
+		font-weight: bold;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: mainFont;
+		src: url('fonts/SF Grandezza Heavy.ttf');
+		font-weight: 900;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: mainFont;
+		src: url('fonts/SF Grandezza Heavy Oblique.ttf');
+		font-weight: 900;
+		font-style: italic;
+	}
+	body
 	{
 		/*background-color: #292929;*/
 		background-color: white;
 	}
-    td
+	td
 	{
 		text-align: center;
 		padding-bottom: 8px;
@@ -54,11 +54,10 @@
 		font-family: mainFont;
 		padding-bottom: 25px;
 	}
-    .frontPageSubtable
-    {
-        padding: 0px;
-
-    }
+	.frontPageSubtable
+	{
+			padding: 0px;
+	}
 	.header
 	{
 		font-family: mainFont;
@@ -89,12 +88,12 @@
 		padding-bottom: 5px;
 	}
 	.links div.sublinks, .links div.subnonlinks
-    {
-        padding-left: 12px;
+	{
+		padding-left: 12px;
 	}
 	.links div.subsublinks, .links .subsubnonlinks
 	{
-        padding-left: 24px;
+		padding-left: 24px;
 		padding-bottom: 5px;
 	}
 	.subheader
@@ -105,12 +104,12 @@
 		font-size: 24px;
 		text-transform: uppercase;
 	}
-    .filmSubheader
-    {
-        width: 400px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
+	.filmSubheader
+	{
+		width: 400px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 	a, .subsubnonlinks, .subnonlinks, div.mainCategoryCurrent
 	{
 		font-family: mainFont;
@@ -122,15 +121,15 @@
 	{
 		font-size: 10pt;
 	}
-    div.mainCategoryCurrent, div.boldText, a.boldText
-    {
-        font-weight: bold;
-    }
-    .subsubnonlinks, .subnonlinks
-    {
-        font-style: normal;
-        font-weight: 900;
-    }
+	div.mainCategoryCurrent, div.boldText, a.boldText
+	{
+			font-weight: bold;
+	}
+	.subsubnonlinks, .subnonlinks
+	{
+			font-style: normal;
+			font-weight: 900;
+	}
 	.regText, .regTextLeft
 	{
 		font-family: mainFont;
@@ -141,33 +140,51 @@
 		/*
 		letter-spacing: 1.5px;*/
 	}
-    .floatRight
-    {
-        float: right;
-    }
-    .alignLeft, .regTextLeft
-    {
-        text-align: left;
-    }
-    .alignElementCenter
-    {
-        margin: auto;
-    }
-    .alignCenter
-    {
-        text-align: center;
-    }
-    .horizontalAlign
-    {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .verticalAlign
-    {
-        display: flex;
-        flex-direction: column;
-    }
+	.floatRight
+	{
+			float: right;
+	}
+	.alignLeft, .regTextLeft
+	{
+			text-align: left;
+	}
+	.alignElementCenter
+	{
+			margin: auto;
+	}
+	.alignCenter
+	{
+			text-align: center;
+	}
+	.horizontalFigure
+	{
+			padding: 0px;
+			border: 1px solid black;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+	}
+	.horizontalFigure figure
+	{
+			border-width: 0px !important;
+			margin: 0px !important;
+	}
+	.horizontalFigure div
+	{
+		padding-top: 10px;
+		padding-right: 10px;
+	}
+	.horizontalAlign
+	{
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+	}
+	.verticalAlign
+	{
+			display: flex;
+			flex-direction: column;
+	}
 	a
 	{
 		text-decoration: none;
@@ -224,73 +241,97 @@
 		font-family: mainFont;
 		text-transform: uppercase;
 		color: black;
-        font-size: 12px;
+		font-size: 12px;
 	}
 	.alignTop
 	{
 		vertical-align: top;
 	}
 
-    .leftMargin10
-    {
-        margin-left: 10px;
-    }
+	.leftMargin10
+	{
+		margin-left: 10px;
+	}
 
-    .leftPadding25
-    {
-        padding-left: 25px;
-    }
+	.leftPadding25
+	{
+		padding-left: 25px;
+	}
 
-    .rightPadding25
-    {
-        padding-right: 25px;
-    }
+	.rightPadding25
+	{
+		padding-right: 25px;
+	}
 
-    figcaption
-    {
-        font-family: mainFont;
-    }
+	figcaption
+	{
+		font-family: mainFont;
+	}
 
-    /* Blog post */
-    .blogpost h2, .blogpost h4, h2.categorySubtitle, h3.categorySubtitle
-    {
-        font-family: mainFont;
-        color: black;
-    }
+	/* Blog post */
+	.blogpost h2, .blogpost h4, h2.categorySubtitle, h3.categorySubtitle
+	{
+		font-family: mainFont;
+		color: black;
+	}
 
-    .blogpost article
-    {
-        font-family: mainFont;
-        color: black;
-        text-align: left;
-        line-height: 24px;
-    }
+	.blogpost article
+	{
+		font-family: mainFont;
+		color: black;
+		text-align: left;
+		line-height: 24px;
+	}
 
-    .blogpost figure.small
-    {
-        width: 267px;
-        border: 1px solid black;
-        margin: 2px;
-    }
+	.blogpost figure.small, .blogpost figure.vertical
+	{
+		width: 267px;
+		border: 1px solid black;
+		margin: 2px;
+	}
 
-    .blogpost figure
-    {
-        width: 400px;
-        border: 1px solid black;
-        margin: 2px;
-    }
+	.blogpost figure
+	{
+		width: 400px;
+		border: 1px solid black;
+		margin: 2px;
+	}
 
-    .blogpost figure.large
-    {
-        width: 800px;
-        border: 1px solid black;
-        margin: 2px;
-    }
 
-    .blogpost figcaption
-    {
-        padding: 1px;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 13px;
-    }
+	.blogpost figure img
+	{
+		display: block;
+	}
+
+	.blogpost figure.twoPhotos img
+	{
+		display: inline;
+	}
+
+	.blogpost figure.twoPhotos img:first-child
+	{
+		margin-right: 5px;
+		border-bottom: 1px solid black;
+		border-right: 1px solid black;
+	}
+
+	.blogpost figure.twoPhotos img:last-child
+	{
+		border-bottom: 1px solid black;
+		border-left: 1px solid black;
+	}
+
+	.blogpost figure.large
+	{
+		width: 800px;
+		border: 1px solid black;
+		margin: 2px;
+	}
+
+	.blogpost figcaption
+	{
+		padding: 1px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 13px;
+	}

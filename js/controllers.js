@@ -135,28 +135,6 @@ adondeApp.controller('DigiDarkroomCtrl', ['$scope', 'dataService', 'dataServiceD
 adondeApp.controller('blogCtrl', ['$scope', '$location', '$routeParams', '$sce', 'dataService', 'dataServiceData',
 	function($scope, $location, $routeParams, $sce, dataService, dataServiceData)
 	{
-		// Get the modal
-		var modal = document.getElementById('myModal');
-
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var img = document.getElementById('myImg');
-		$scope.imgClick = function(img)
-		{
-			var modalImg = document.getElementById("img01");
-			var captionText = document.getElementById("caption");
-		  modal.style.display = "block";
-		  modalImg.src = this.src;
-		  captionText.innerHTML = this.alt;
-		}
-
-		// Get the <span> element that closes the modal
-		var closeImgSpan = document.getElementsByClassName("close")[0];
-
-		// When the user clicks on <span> (x), close the modal
-		closeImgSpan.onclick = function() {
-		  modal.style.display = "none";
-		}
-
 		$scope.showBlogPost = function(blogPostObj)
 		{
 			if (blogPostObj.has_children == 1)

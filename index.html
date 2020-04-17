@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>Zion Orent Photography</title>
 <link type="text/css" rel="stylesheet" href="/inc/styles.css" />
+<link type="text/css" rel="stylesheet" href="/inc/imgViewer.css" />
 <link type="text/css" rel="stylesheet" href="/lib/galleria/themes/classic/galleria.classic.css" />
 <script>
 	function onLoad()
@@ -25,6 +26,29 @@
 		document.getElementById("bottomTable").style.top = (myHeight - 50) + 'px';
 		document.getElementById("bottomTable").style.left = ((myWidth / 2) - (433 / 2)) + 'px';
 	}
+
+	// Image CSS/HTML/JS from here: https://www.w3schools.com/howto/howto_css_modal_images.asp
+	// Get the modal
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var captionText = document.getElementById("caption");
+
+	function expandImage(src)
+	{
+		var modal = document.getElementById("imageModal");
+		modal.style.display = "block";
+		var modalImg = document.getElementById("modalImage");
+	  modalImg.src = src;
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	function closeImageModal() {
+		var modal = document.getElementById("imageModal");
+	  modal.style.display = "none";
+		var modalImg = document.getElementById("modalImage");
+		modalImg.src = '';
+	}
+
 </script>
 <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -41,6 +65,11 @@
 <script src="js/directives.js"></script>
 </head>
 <body onload="onLoad()" data-ng-controller="mainController">
+<div id="imageModal" class="modal">
+	<span class="close" id="closeImageModal" onclick="closeImageModal()">&times;</span>
+	<img class="modal-content" id="modalImage">
+	<div id="caption"></div>
+</div>
 
 <div data-ng-view></div>
 
